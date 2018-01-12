@@ -5,7 +5,7 @@
     <script type="text/javascript" src="index.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <meta charset="utf-8">
-    <title>5e Monster Maker</title>
+    <title>String Array Formatter</title>
   </head>
   <body>
     <noscript>
@@ -13,51 +13,18 @@
     </noscript>
     
     <p class="App-explanation">
-      <br /><b>Instructions:</b> None.
+      <br />Accepts a bunch of plain text phrases, separated by semicolons. Turns them into a formatted array of strings to copy/paste into your code.
+      Designed to reduce repetitive strain injuries from typing long string arrays.
+      <br /><b>Instructions:</b> Type each string in the input box, separated by semicolons, with no other formatting needed.
+      (Leading and trailing spaces will be trimmed, but spaces between other characters will not.)
+      The final text chunk should not be followed by a semicolon.
+      <br /><b>Example Input:</b> apple; grape; pineapple; orange
       </p>
 
     <textarea id="text-input"></textarea>
     <textarea id="text-output"></textarea>
-    
-      
+    <br />      
       <button class="CR-button" onClick='handleCRClick(-3)'>0</button>
-      <button class="CR-button" onClick='handleCRClick(-2)'>1/8</button>
-      <button class="CR-button" onClick='handleCRClick(-1)'>1/4</button>
-      <button class="CR-button" onClick='handleCRClick(0)'>1/2</button>
-      <br />
-      <button class="CR-button" onClick='handleCRClick(1)'>1</button>
-      <button class="CR-button" onClick='handleCRClick(2)'>2</button>
-      <button class="CR-button" onClick='handleCRClick(3)'>3</button>
-      <button class="CR-button" onClick='handleCRClick(4)'>4</button>
-      <button class="CR-button" onClick='handleCRClick(5)'>5</button>
-      <button class="CR-button" onClick='handleCRClick(6)'>6</button>
-      <button class="CR-button" onClick='handleCRClick(7)'>7</button>
-      <button class="CR-button" onClick='handleCRClick(8)'>8</button>
-      <button class="CR-button" onClick='handleCRClick(9)'>9</button>
-      <button class="CR-button" onClick='handleCRClick(10)'>10</button>
-      <br />
-      <button class="CR-button" onClick='handleCRClick(11)'>11</button>
-      <button class="CR-button" onClick='handleCRClick(12)'>12</button>
-      <button class="CR-button" onClick='handleCRClick(13)'>13</button>
-      <button class="CR-button" onClick='handleCRClick(14)'>14</button>
-      <button class="CR-button" onClick='handleCRClick(15)'>15</button>
-      <button class="CR-button" onClick='handleCRClick(16)'>16</button>
-      <button class="CR-button" onClick='handleCRClick(17)'>17</button>
-      <button class="CR-button" onClick='handleCRClick(18)'>18</button>
-      <button class="CR-button" onClick='handleCRClick(19)'>19</button>
-      <button class="CR-button" onClick='handleCRClick(20)'>20</button>
-      <br>
-      <br />
-      <button class="CR-button" onClick='handleCRClick(11)'>21</button>
-      <button class="CR-button" onClick='handleCRClick(12)'>22</button>
-      <button class="CR-button" onClick='handleCRClick(13)'>23</button>
-      <button class="CR-button" onClick='handleCRClick(14)'>24</button>
-      <button class="CR-button" onClick='handleCRClick(15)'>25</button>
-      <button class="CR-button" onClick='handleCRClick(16)'>26</button>
-      <button class="CR-button" onClick='handleCRClick(17)'>27</button>
-      <button class="CR-button" onClick='handleCRClick(18)'>28</button>
-      <button class="CR-button" onClick='handleCRClick(19)'>29</button>
-      <button class="CR-button" onClick='handleCRClick(20)'>30</button>
-      <br>
+    
   </body>
 </html>
