@@ -4,34 +4,35 @@
 
 "use strict";
 
+//HTML ID tags for input and output text areas
+const InputTextArea = "text-input";
+const OutputTextArea = "text-output";
+
 function makeArray(rawData){
   var finalText = "";
   //find first semicolon, cut out everything up to that
 
   do {
     //cutting stuff up
+    alert("Before: " + rawData);
+    finalText += rawData.slice(0, rawData.indexOf(";")); // cuts out the section of text, appends it to "finalText" with formatting
+    rawData = rawData.substring(rawData.indexOf(";") + 1); //removes the appended chunk of text from rawData, plus the semicolon
+    alert("Cut:" + finalText)
+    alert("After: " + rawData);
+
   } while (rawData.indexOf(";") != -1); //stops the looping once there's no more semicolons
+
+  return finalText;
 
   //finishes final section of text
 
   //DO MORE TO MAKE THIS ACTUALLY WORK
-  alert("Before: " + rawData);
-  finalText += rawData.slice(0, rawData.indexOf(";")); // cuts out the section of text, appends it to "finalText" with formatting
-  rawData = rawData.substring(rawData.indexOf(";") + 1); //removes the appended chunk of text from rawData, plus the semicolon
-  alert("Cut:" + finalText)
-  alert("After: " + rawData);
-
-  alert("2Before: " + rawData);
-  finalText += rawData.slice(0, rawData.indexOf(";")); // cuts out the section of text, appends it to "finalText" with formatting
-  rawData = rawData.substring(rawData.indexOf(";") + 1); //removes the appended chunk of text from rawData, plus the semicolon
-  alert("2Cut:" + finalText)
-  alert("2After: " + rawData);
-
+  
 }
 
 
 function handleCRClick(CR){
-  makeArray("Bob is silly; Jane is sillier; Jake is the silliest.")
+  document.getElementById(OutputTextArea).value = makeArray(document.getElementById(InputTextArea).value);
 }
 
 

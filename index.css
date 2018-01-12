@@ -13,6 +13,11 @@ body {
   width: 99%;
 }
 
+textarea {
+  height: 20vw;
+  width: 10vw;
+}
+
 .App-explanation {
   background-color: lightgray;
   text-align: left;
