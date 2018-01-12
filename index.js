@@ -9,17 +9,20 @@ const InputTextArea = "text-input";
 const OutputTextArea = "text-output";
 
 function makeArray(rawData){
+  var currentIndex = 0;
   var finalText = "[ \n";
   //find first semicolon, cut out everything up to that
 
   do {
     //cutting stuff up
-    finalText += '"' + rawData.slice(0, rawData.indexOf(";")).trim() + '", \n'; // cuts out the section of text, appends it to "finalText" with formatting
+    finalText += '"' + rawData.slice(0, rawData.indexOf(";")).trim() + '", //index ' + currentIndex + '\n'; 
+    currentIndex += 1; //increments index
+    // cuts out the section of text, appends it to "finalText" with formatting
     rawData = rawData.substring(rawData.indexOf(";") + 1); //removes the appended chunk of text from rawData, plus the semicolon
 
   } while (rawData.indexOf(";") != -1); //stops the looping once there's no more semicolons
 
-  finalText += '"' + rawData.trim() + '"\n]'; //adds the remainder after the semicolon; closes off the array
+  finalText += '"' + rawData.trim() + '" //index ' + currentIndex + '\n]'; //adds the remainder after the semicolon; closes off the array
 
   return finalText;
 
